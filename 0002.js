@@ -1,6 +1,6 @@
 var input = "";
 
-function main(data){
+exports.main = function(data){
 	for(var i = 0; i < data.length; i++) {
 		var d = data[i].split(' ');
 		if(d.length == 2){
@@ -19,5 +19,5 @@ process.stdin.on('data', function(chunk) {
 });
 process.stdin.on('end', function() {
 	input = input.split('\n');
-	main(input);
+	exports.main(input);
 });
